@@ -4,351 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tristram Apurado Jr. - Data Analyst Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #6a0dad, #8a2be2, #9370db);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 20px rgba(106, 13, 173, 0.3);
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 20px;
-            object-fit: cover;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            padding: 8px 15px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: white;
-        }
-
-        section {
-            background: #1e1e1e;
-            border-radius: 10px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid #333;
-        }
-
-        h2 {
-            color: #bb86fc;
-            border-bottom: 3px solid #6a0dad;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        h3 {
-            color: #bb86fc;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        h4 {
-            color: #cfb3ff;
-            margin: 20px 0 10px 0;
-        }
-
-        .project {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #333;
-        }
-
-        .project:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .project-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-
-        .project-images img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-            border: 1px solid #333;
-            cursor: pointer;
-        }
-
-        .project-images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(106, 13, 173, 0.4);
-        }
-
-        .tools {
-            background: #2d2d2d;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #6a0dad;
-            color: #e0e0e0;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .skill-category {
-            background: #2d2d2d;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #6a0dad;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
-        }
-
-        .skill-category h3 {
-            color: #bb86fc;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin: 15px 0;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #333;
-            color: #e0e0e0;
-        }
-
-        .feature-list li:before {
-            content: "▸";
-            color: #bb86fc;
-            margin-right: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            margin-top: 40px;
-            border-top: 1px solid #333;
-        }
-
-        .project-links {
-            margin-top: 20px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            background: linear-gradient(135deg, #6a0dad, #8a2be2);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-links a:hover {
-            background: linear-gradient(135deg, #8a2be2, #6a0dad);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        p {
-            color: #e0e0e0;
-            margin-bottom: 15px;
-        }
-
-        /* Lightbox Styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-
-        .lightbox-img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            background: #6a0dad;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .lightbox-close:hover {
-            background: #8a2be2;
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            padding: 0 20px;
-        }
-
-        .lightbox-prev,
-        .lightbox-next {
-            background: #6a0dad;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .lightbox-prev:hover,
-        .lightbox-next:hover {
-            background: #8a2be2;
-        }
-
-        .lightbox-counter {
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .project-images {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info a {
-                display: block;
-                margin: 10px 0;
-            }
-            
-            section {
-                padding: 25px;
-            }
-
-            .lightbox-close {
-                top: -50px;
-                right: 10px;
-            }
-
-            .lightbox-nav {
-                padding: 0 10px;
-            }
-
-            .lightbox-prev,
-            .lightbox-next {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -381,6 +37,144 @@
 
         <section id="projects">
             <h2>Projects Portfolio</h2>
+            
+            <div class="project">
+                <h3>🧠 Analyzing Students' Mental Health - PostgreSQL & Data Analysis</h3>
+                <div class="tools">
+                    <strong>Tools Used:</strong> PostgreSQL, SQL Queries, Statistical Analysis, Data Visualization
+                </div>
+                
+                <div class="project-images">
+                    <img src="https://via.placeholder.com/400x250/6a0dad/ffffff?text=Mental+Health+Analysis" alt="Mental Health Analysis Dashboard" data-project="mental-health" data-index="0">
+                    <img src="https://via.placeholder.com/400x250/8a2be2/ffffff?text=SQL+Queries" alt="SQL Query Analysis" data-project="mental-health" data-index="1">
+                    <img src="https://via.placeholder.com/400x250/9370db/ffffff?text=Data+Visualization" alt="Data Visualization Charts" data-project="mental-health" data-index="2">
+                </div>
+                
+                <p><strong>Project Description:</strong> Analyzed international students' mental health data from a Japanese university survey to determine if studying in a different country affects mental health. The study found that international students have higher risks of mental health difficulties, with social connectedness and acculturation stress being predictive of depression.</p>
+                
+                <h4>Key Analysis Areas:</h4>
+                <ul class="feature-list">
+                    <li>Comparison of depression scores between international and domestic students</li>
+                    <li>Impact of length of stay on mental health metrics</li>
+                    <li>Correlation between social connectedness and depression levels</li>
+                    <li>Analysis of acculturation stress as a predictor of depression</li>
+                    <li>Effect of language proficiency (Japanese & English) on mental health outcomes</li>
+                </ul>
+                
+                <h4>SQL Analysis Performed:</h4>
+                <div class="code-snippet">
+                    <pre><code>-- Compare depression scores by student type
+SELECT inter_dom, 
+       ROUND(AVG(todep), 2) as avg_depression,
+       ROUND(AVG(tosc), 2) as avg_social_connect,
+       ROUND(AVG(toas), 2) as avg_accult_stress
+FROM students
+GROUP BY inter_dom;
+
+-- Analyze impact of stay duration on mental health
+SELECT stay, 
+       COUNT(inter_dom) as student_count,
+       ROUND(AVG(todep), 2) as average_phq9,
+       ROUND(AVG(tosc), 2) as average_scs,
+       ROUND(AVG(toas), 2) as average_asss
+FROM students
+WHERE inter_dom = 'Inter'
+GROUP BY stay
+ORDER BY stay;</code></pre>
+                </div>
+                
+                <h4>Key Findings:</h4>
+                <ul class="feature-list">
+                    <li>International students showed significantly higher depression scores compared to domestic students</li>
+                    <li>Students with shorter stays (1-2 years) exhibited higher acculturation stress</li>
+                    <li>Strong correlation found between low social connectedness scores and higher depression levels</li>
+                    <li>Language proficiency played a moderating role in acculturation stress</li>
+                    <li>Length of stay showed non-linear relationship with mental health adaptation</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="https://www.datacamp.com/datalab/w/6dcdbf44-5f94-449b-aacd-dec7b4adb8b1/edit" target="_blank">View DataLab Analysis</a>
+                </div>
+            </div>
+
+<div class="project">
+    <h3>🌍 Analyze International Debt Statistics - SQL & World Bank Data</h3>
+    <div class="tools">
+        <strong>Tools Used:</strong> PostgreSQL, SQL Queries, World Bank Data, Data Analysis
+    </div>
+    
+    <div class="project-images">
+        <img src="https://via.placeholder.com/400x250/2E8B57/ffffff?text=World+Bank+Debt+Data" alt="International Debt Analysis" data-project="debt-analysis" data-index="0">
+        <img src="https://via.placeholder.com/400x250/3CB371/ffffff?text=SQL+Queries" alt="SQL Analysis Queries" data-project="debt-analysis" data-index="1">
+        <img src="https://via.placeholder.com/400x250/20B2AA/ffffff?text=Debt+Visualization" alt="Debt Visualization" data-project="debt-analysis" data-index="2">
+    </div>
+    
+    <p><strong>Project Description:</strong> Analyzed international debt statistics collected by The World Bank to understand debt patterns across developing countries. The dataset contained information about debt amounts (in USD) owed by countries across various debt indicator categories, providing insights into global economic dependencies and financial obligations.</p>
+    
+    <h4>Key Research Questions:</h4>
+    <ul class="feature-list">
+        <li>What is the total number of distinct countries in the database?</li>
+        <li>Which country has the highest total amount of debt?</li>
+        <li>Which country has the lowest amount of principal repayments?</li>
+        <li>What are the major debt indicator categories?</li>
+        <li>How is debt distributed across different regions?</li>
+    </ul>
+    
+    <h4>SQL Analysis & Key Queries:</h4>
+    <div class="code-snippet">
+        <pre><code>-- 1. Count distinct countries in the database
+SELECT COUNT(DISTINCT country_name) as total_distinct_countries
+FROM international_debt;
+
+-- 2. Find country with highest total debt
+SELECT country_name, SUM(debt) as total_debt
+FROM international_debt
+GROUP BY country_name
+ORDER BY total_debt DESC
+LIMIT 1;
+
+-- 3. Find country with lowest principal repayments
+SELECT country_name, indicator_name, MIN(debt) as lowest_repayment
+FROM international_debt
+WHERE indicator_code = 'DT.AMT.DLXF.CD'
+GROUP BY country_name, indicator_name
+ORDER BY lowest_repayment ASC
+LIMIT 1;
+
+-- 4. Analyze debt by indicator categories
+SELECT indicator_name, COUNT(*) as country_count,
+       ROUND(AVG(debt), 2) as average_debt,
+       SUM(debt) as total_debt_by_indicator
+FROM international_debt
+GROUP BY indicator_name
+ORDER BY total_debt_by_indicator DESC
+LIMIT 10;</code></pre>
+    </div>
+    
+    <h4>Key Findings & Insights:</h4>
+    <ul class="feature-list">
+        <li><strong>China</strong> was identified as the country with the highest total debt amount</li>
+        <li><strong>Timor-Leste</strong> showed the lowest principal repayments at $825,000 USD</li>
+        <li>Analysis revealed distinct debt patterns across different economic sectors</li>
+        <li>Long-term external debt constituted a significant portion of total debt</li>
+        <li>Debt distribution varied significantly between developing nations</li>
+        <li>Infrastructure-related debt indicators were among the most common categories</li>
+    </ul>
+    
+    <h4>Technical Skills Demonstrated:</h4>
+    <ul class="feature-list">
+        <li><strong>SQL Aggregation:</strong> Used SUM, COUNT, AVG, MIN functions for comprehensive analysis</li>
+        <li><strong>Data Filtering:</strong> Implemented WHERE clauses for specific indicator analysis</li>
+        <li><strong>Grouping & Sorting:</strong> Applied GROUP BY and ORDER BY for meaningful data organization</li>
+        <li><strong>Data Exploration:</strong> Conducted exploratory analysis on World Bank financial data</li>
+        <li><strong>Insight Generation:</strong> Translated raw data into actionable economic insights</li>
+    </ul>
+    
+    <div class="project-links">
+        <a href="https://www.datacamp.com/datalab/w/c4aafbde-76a7-4c57-aa51-201a2f32293a/edit" target="_blank">View DataLab Analysis</a>
+    </div>
+</div>
+
             
             <div class="project">
                 <h3>🚴‍♂️ Bike Sales Dashboard - Excel Data Analysis</h3>
@@ -483,10 +277,12 @@
                     <p>Power BI: DAX, Power Query, Interactive Dashboards</p>
                     <p>Google Sheets: Advanced Formulas, Automation, Data Visualization</p>
                     <p>Python: Data Analysis, Pandas, Data Processing</p>
+                    <p>PostgreSQL: SQL Queries, Data Analysis, Statistical Reporting</p>
                 </div>
                 <div class="skill-category">
                     <h3>Data Management & Databases</h3>
                     <p>SQL: Database Querying, Data Retrieval, Complex Queries</p>
+                    <p>PostgreSQL: Advanced Analytics, Statistical Functions</p>
                     <p>Data Cleaning & Validation</p>
                     <p>Data Transformation & Processing</p>
                     <p>Automated Calculations & Reporting</p>
@@ -495,8 +291,8 @@
                     <h3>Core Competencies</h3>
                     <p>Data Entry: High Accuracy, Speed, Attention to Detail</p>
                     <p>Online Research: Information Gathering, Data Verification</p>
-                    <p>Trend Analysis & Pattern Recognition</p>
                     <p>Statistical Analysis & Insights Generation</p>
+                    <p>Mental Health Data Analysis & Research</p>
                     <p>Interactive Reporting & Dashboard Creation</p>
                 </div>
             </div>
@@ -523,83 +319,6 @@
         </div>
     </footer>
 
-    <script>
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxClose = document.getElementById('lightbox-close');
-        const lightboxPrev = document.getElementById('lightbox-prev');
-        const lightboxNext = document.getElementById('lightbox-next');
-        const lightboxCounter = document.getElementById('lightbox-counter');
-
-        let currentImages = [];
-        let currentIndex = 0;
-
-        // Open lightbox when image is clicked
-        document.querySelectorAll('.project-images img').forEach(img => {
-            img.addEventListener('click', function() {
-                const project = this.getAttribute('data-project');
-                currentImages = Array.from(document.querySelectorAll(`img[data-project="${project}"]`));
-                currentIndex = parseInt(this.getAttribute('data-index'));
-                openLightbox();
-            });
-        });
-
-        function openLightbox() {
-            lightbox.classList.add('active');
-            updateLightboxImage();
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        function updateLightboxImage() {
-            lightboxImg.src = currentImages[currentIndex].src;
-            lightboxImg.alt = currentImages[currentIndex].alt;
-            lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-        }
-
-        function showNextImage() {
-            currentIndex = (currentIndex + 1) % currentImages.length;
-            updateLightboxImage();
-        }
-
-        function showPrevImage() {
-            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-            updateLightboxImage();
-        }
-
-        // Event listeners
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightboxNext.addEventListener('click', showNextImage);
-        lightboxPrev.addEventListener('click', showPrevImage);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (!lightbox.classList.contains('active')) return;
-            
-            switch(e.key) {
-                case 'Escape':
-                    closeLightbox();
-                    break;
-                case 'ArrowRight':
-                    showNextImage();
-                    break;
-                case 'ArrowLeft':
-                    showPrevImage();
-                    break;
-            }
-        });
-
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
